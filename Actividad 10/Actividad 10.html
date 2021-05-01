@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <form action="./Actividad10.php" method="POST">
+        <fieldset style="width: 400px;">
+            <legend>Solicitud de ingreso a la Uni</legend>
+            <label>Nombre:
+                <input type="text" name="Nombre">
+            </label>
+            <br><br>
+            <label>Apellido Paterno:
+                <input type="text" name="ApellidoPaterno">
+            </label>
+            <br><br>
+            <label>Apellido Materno:
+                <input type="text" name="ApellidoMaterno">
+            </label>
+            <br><br>
+            <label>Sexo:
+                    <select name="Sexo">
+                        <option value="Hombre">Hombre</option>
+                        <option value="Mujer">Mujer</option>
+                    </select>
+            </label>
+            <br><br>
+            <label>Edad:
+                <input type="number" name="Edad" min="10" max="90">
+            </label>
+            <br><br>
+            <label>Correo electrónico:
+                <input type="email" name="Email">
+            </label>
+            <br><br>
+            <label>Teléfono:
+                <input type="number" name="Telefono">
+            </label>
+            <br><br>
+            <label>Celular:
+                <input type="number" name="Celular">
+            </label>
+            <br><br>
+            <label>Escuela de procedencia:
+                <select name="Escuela">
+                    <option value="ENP">Escuela Nacional Preparatoria</option>
+                    <option value="CCH">Colegio de Ciencias y Humanidades</option>
+                </select>
+            </label>
+            <br><br>
+            <label>Promedio:
+                <input type="number" name="Promedio" min="6" max="10">  
+            </label>
+            <br><br>
+            <label>Primera opción:
+                <input type="text" name="Primeraopcion">
+            </label>
+            <br><br>
+            <label>Segunda opción:
+                <input type="text" name="Segundaopcion">
+            </label>
+            <br><br>
+
+            <input type="submit">
+            <input type="reset">
+            
+        </fieldset>
+
+    </form>
+</body>
+</html>

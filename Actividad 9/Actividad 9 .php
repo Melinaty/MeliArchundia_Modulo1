@@ -2,7 +2,7 @@
     
     echo "<table border=1>";
         //variable que define el tamaño del tablero
-        $x=10; 
+        $x=11; 
         //dibuja las filas
         for($y=1; $y<=$x; $y++)
         {

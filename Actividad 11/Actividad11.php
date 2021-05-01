@@ -14,11 +14,6 @@
     $respuestas= [ $pregunta1, $pregunta2, $pregunta3, $pregunta4, $pregunta5, $pregunta6, $pregunta7, $pregunta8, $pregunta9, $pregunta10];
     //ordena el arreglo alfabéticamente
     sort($respuestas);
-    for($i=0; $i<9; $i++)
-    {
-        var_dump($respuestas[$i]);
-
-    }
     //convierte el arreglo en una cadena
     $res_cad= implode("", $respuestas);
     //La primera vez que se menciona y la última 

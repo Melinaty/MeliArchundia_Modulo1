@@ -1,8 +1,9 @@
 <?php
     
     echo "<table border=1>";
+        //variable que define el tamaño del tablero
+        $x=10; 
         //dibuja las filas
-        $x=10;
         for($y=1; $y<=$x; $y++)
         {
             echo "<tr>";

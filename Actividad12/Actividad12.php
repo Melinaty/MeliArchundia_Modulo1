@@ -50,7 +50,6 @@ switch($traduce)
 {
     case "Español a Morse":
         $mensaje1=strtolower($mensaje);
-        echo $mensaje1;
         if(stripos($mensaje1, "a")||stripos($mensaje1, "b")||stripos($mensaje1, "c")||stripos($mensaje1, "d")||stripos($mensaje1, "e")||stripos($mensaje1, "f")||stripos($mensaje1, "g")||stripos($mensaje1, "h")
         ||stripos($mensaje1, "i")||stripos($mensaje1, "j")||stripos($mensaje1, "k")||stripos($mensaje1, "l")||stripos($mensaje1, "m")||stripos($mensaje1, "n")||stripos($mensaje1, "o")||stripos($mensaje1, "p")
         ||stripos($mensaje1, "q")||stripos($mensaje1, "r")||stripos($mensaje1, "s")||stripos($mensaje1, "t")||stripos($mensaje1, "u")||stripos($mensaje1, "v")||stripos($mensaje1, "w")

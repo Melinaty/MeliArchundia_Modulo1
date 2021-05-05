@@ -113,6 +113,7 @@ switch($traduce)
             //convierte el arreglo en una cadena
             $nuevomensaje=implode($nuevomensaje);
             //pasa la cadena a mayúsculas.
+            $nuevomensaje=str_replace(" "," / ",$nuevomensaje);
             echo "<h1>Su traducción es:</h1>". strtoupper($nuevomensaje);
 
         }

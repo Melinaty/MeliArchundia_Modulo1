@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <form action="./Actividad14.php" method="POST">
+        <table>
+            <tr>
+                <td>
+                <fieldset style="width: 400px">
+                <legend><h2>Reloj Mundial</h2></legend>
+                <label>Ingrese hora(CDMX):
+                    <input type="time" name="hora">
+                </label>
+                <br><br>
+                <label>Elige los países que quieres consultar:
+                    <br><br>
+                <table>
+                    <tr>
+                        <td>Nueva York</td>
+                        <td><input type="checkbox" name="zona[]" value="Nueva York"></td>
+                        <td>Sao Paulo</td>
+                        <td><input type="checkbox" name="zona[]" value="Sao Paulo"></td>
+                    </tr>
+
+                    <tr>
+                        <td>Madrid</td>
+                        <td><input type="checkbox" name="zona[]" value="Madrid"></td>
+                        <td>Paris</td>
+                        <td><input type="checkbox" name="zona[]" value="Paris"></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Roma</td>
+                        <td><input type="checkbox" name="zona[]" value="Roma"></td>
+                        <td>Atenas</td>
+                        <td><input type="checkbox" name="zona[]" value="Atenas"></td>
+                    </tr>
+                    <tr>
+                        <td>Beijin</td>
+                        <td><input type="checkbox" name="zona[]" value="Beijin"></td>
+                        <td>Tokio</td>
+                        <td><input type="checkbox" name="zona[]" value="Tokio"></td>
+                    </tr>
+                </table>
+                </label> 
+                <br><br>
+                <input type="submit" value="Consultar">
+                <input type="hidden" name="Revisar" value="1">
+            </fieldset> 
+    </form>
+    <form action="./Actividad14.php" method="POST">
+            </td>
+            <td>  
+            <fieldset style="width: 400px">
+                <legend><h2>Calcula tu cumpleaños</h2></legend>
+                <label>Ingrese su fecha de nacimiento:
+                    <input type="date" name="fecha">
+                </label>
+                <br><br>
+                <label>¿Qué quieres consultar?:
+                <br> <br> 
+                <table>
+                    <tr>
+                        <td>Días para próximo cumpleaños</td>
+                        <td><input type="checkbox" name="calcula[]" value="Dias" ></td>
+                    </tr>
+                    <tr>
+                        <td>Horas para próximo cumpleaños</td>
+                        <td><input type="checkbox" name="calcula[]" value="Horas"></td>
+                    </tr>
+                        <td>Minutos para próximo cumpleaños</td>
+                        <td><input type="checkbox" name="calcula[]" value="Minutos"></td>
+                    <tr>
+                        <td>¿Será en fin de semana?</td>
+                        <td><input type="checkbox" name="calcula[]" value="¿Es fin de semana?"></td>
+                    </tr>    
+                </table>
+                    <br>
+                </label>
+                <br>
+                <input type="submit" value="Calcular">
+                <input type="hidden" name="Revisar" value="2">
+            
+            </fieldset>
+        </form>
+            </td>
+            </tr>
+        </table>
+</body>
+</html>

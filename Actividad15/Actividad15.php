@@ -1,12 +1,13 @@
 <?php
-        function subir ()
+        function subir ()//Para que ponga el botón de subir obra
         {
             echo "<form action='./Migaleria.html' method='POST'>
                 <button type='submit'>Subir obra a mi galería</button>
                 </form>";
         }
-        if(isset($_FILES["archivo"]))
+        if(isset($_FILES["archivo"]))//Si si se mando el formulario
         {
+            //checa si si se mandó el año y el autor, si no poner sin autor.
             $autor=(isset($_POST["autor"]) && $_POST["autor"]!="") ? $_POST["autor"]:"Sin autor";
             $año=(isset($_POST["año"]) && $_POST["año"]!="") ? $_POST["año"]:"Sin año";
             $obra=$_POST["obra"];
@@ -14,6 +15,7 @@
             $arch=$_FILES['archivo']['tmp_name'];
             $name=$_FILES['archivo']['name'];
             $ext=pathinfo($name,PATHINFO_EXTENSION);
+            //Checa si la extensión es jpg, jpeg, png
             if($ext=="jpg" || $ext=="jpeg" || $ext=="png")
             {
                rename($arch, './statics/'.$obra."$".$autor."$".$año."$." .pathinfo($name,PATHINFO_EXTENSION));
@@ -22,7 +24,7 @@
                 <button type='submit'>Ver galería</button>
                 </form>"; 
             }
-            else
+            else//dice que no se subió porque mandaron un archivo incorrecto
             {
                 echo "<h1>NO SE PUDO CARGAR EL ARCHIVO PORQUE NO TIENE EXTENSIÓN PNG, JPG O JPEG.</h1>"; 
                 subir();
@@ -36,7 +38,7 @@
             $archivos = array();
             $hay_archivos= true;
             $i=0;
-            while($hay_archivos)
+            while($hay_archivos)//va a hacerlo mientra existan archivos dentro de la carpeta
             {
                 $archivo2 = readdir($carpeta);//lee lo que hay en la carpeta
                 if($archivo2 !== false)
@@ -54,7 +56,7 @@
                     $hay_archivos=false;
                 }
             }
-            if($i!=0)
+            if($i!=0)//Si por lo menos hay un archivo 
             {
                 echo "<h1>IMAGENES EN LA GALERÍA DE ARTE</h1>";
                 echo "<table border='1'align='center' style='width:auto'>";
@@ -68,6 +70,7 @@
                     echo "<td><img src='./statics/".$value."'width='300' height='300' alt='Soy una imagen'>";
                     $value2=strtoupper($value);
                     $nombre_obra=explode("$",$value2);
+                    //lista con la información
                     echo "<ul>
                         <li><strong>Nombre de la pintura:</strong>".$nombre_obra[0]."</li>
                         <li><strong>Nombre del pintor:</strong>".$nombre_obra[1]."</li>
@@ -80,7 +83,7 @@
                 }
                 echo "</table>";
             }
-            else
+            else//si no hay archivos
             {
                 echo "<h1>TU GALERÍA DE ARTE NO TIENE NINGUNA IMAGEN</h1>";
             }
